@@ -1,0 +1,97 @@
+### Login
+POST https://localhost:7001/users/login
+Content-Type: application/json
+
+{
+  "email": "usuario@exemplo.com",
+  "password": "senha123"
+}
+
+### Criar usuário
+POST https://localhost:7001/users
+Content-Type: application/json
+
+{
+  "name": "João Silva",
+  "email": "joao@exemplo.com",
+  "password": "senha123"
+}
+
+### Buscar usuário por ID
+GET https://localhost:7001/users/1
+
+### Listar todos os usuários
+GET https://localhost:7001/users
+
+### Atualizar usuário
+PATCH https://localhost:7001/users/1
+Content-Type: application/json
+
+{
+  "name": "João Silva Atualizado",
+  "email": "joao.novo@exemplo.com",
+  "password": "nova-senha123"
+}
+
+### Deletar usuário
+DELETE https://localhost:7001/users/1
+
+### Listar todos os clientes
+GET https://localhost:7001/customers
+
+### Criar cliente
+POST https://localhost:7001/customers
+Content-Type: application/json
+
+{
+  "name": "Maria Silva",
+  "email": "maria@exemplo.com",
+  "cpf": "123.456.789-00"
+}
+
+### Buscar cliente por ID
+GET https://localhost:7001/customers/1
+
+### Atualizar cliente
+PATCH https://localhost:7001/customers/1
+Content-Type: application/json
+
+{
+  "name": "Maria Silva Atualizada",
+  "email": "maria.nova@exemplo.com",
+  "cpf": "123.456.789-00"
+}
+
+### Deletar cliente
+DELETE https://localhost:7001/customers/1
+
+### Listar endereços de um cliente
+GET https://localhost:7001/customers/1/addresses
+
+### Criar endereço para um cliente
+POST https://localhost:7001/customers/1/addresses
+Content-Type: application/json
+
+{
+  "address": "Rua das Flores",
+  "number": "123",
+  "complement": "Apto 45",
+  "zipCode": "01234-567"
+}
+
+### Buscar endereço específico de um cliente
+GET https://localhost:7001/customers/1/addresses/1
+
+### Atualizar endereço de um cliente
+PATCH https://localhost:7001/customers/1/addresses/1
+Content-Type: application/json
+
+{
+  "address": "Rua das Flores Atualizada",
+  "number": "456",
+  "complement": "Casa",
+  "zipCode": "01234-890"
+}
+
+### Deletar endereço de um cliente
+DELETE https://localhost:7001/customers/1/addresses/1

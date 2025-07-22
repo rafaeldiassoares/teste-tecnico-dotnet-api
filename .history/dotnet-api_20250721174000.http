@@ -1,0 +1,42 @@
+### Login (não requer autenticação)
+POST https://localhost:7001/users/login
+Content-Type: application/json
+
+{
+  "email": "usuario@exemplo.com",
+  "password": "senha123"
+}
+
+### Criar usuário (requer autenticação)
+POST https://localhost:7001/users
+Content-Type: application/json
+Authorization: Bearer seu-token-aqui
+
+{
+  "name": "João Silva",
+  "email": "joao@exemplo.com",
+  "password": "senha123"
+}
+
+### Buscar usuário por ID (requer autenticação)
+GET https://localhost:7001/users/1
+Authorization: Bearer seu-token-aqui
+
+### Listar todos os usuários (requer autenticação)
+GET https://localhost:7001/users
+Authorization: Bearer seu-token-aqui
+
+### Atualizar usuário (requer autenticação)
+PATCH https://localhost:7001/users/1
+Content-Type: application/json
+Authorization: Bearer seu-token-aqui
+
+{
+  "name": "João Silva Atualizado",
+  "email": "joao.novo@exemplo.com",
+  "password": "nova-senha123"
+}
+
+### Deletar usuário (requer autenticação)
+DELETE https://localhost:7001/users/1
+Authorization: Bearer seu-token-aqui
